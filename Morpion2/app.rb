@@ -4,6 +4,7 @@ Bundler.require
 
 require_relative 'lib/app/BoardCase'
 require_relative 'lib/app/Player'
+require_relative 'lib/app/Game'
 
 def perform
     
@@ -16,17 +17,13 @@ def perform
   position7 = BoardCase.new("C1","")
   position8 = BoardCase.new("C2","")
   position9 = BoardCase.new("C3","")
-  print "Voici l'instance : "
-  puts position9
   puts position9.contenu
   puts position9.position
 
-  player1 = Player.new("name_joueur1")
-  puts player1
-  puts player1.name
-  #puts player1.symbole
-  player2 = Player.new("name_joueur2")
+  my_game = Game.new[joueur1, joueur2]
 
+	joueur1.play  
+  
 end
 
 perform
